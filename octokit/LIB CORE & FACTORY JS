@@ -1,0 +1,25 @@
+/***/ REST LIB CORE JS REPOSITORY DECOMPILE---
+
+"./lib/core.js repository decompile"
+/*!*********************!**********
+  !*** ./lib/core.js repository decompile ***!
+  \*********************/*****************
+
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const factory = __webpack_require__(/*! ./factory */ \"./lib/factory.js\");\n\nmodule.exports = factory();\n\n\n//# sourceURL=webpack://Octokit/./lib/core.js?");
+
+/***/ }),https://github.com/https-github-com-52005723-ruzyysmartt/rest.js.git
+
+/***/ "./lib/factory.js repository decompile":
+/*!************************!*****************
+  !*** ./lib/factory.js repository decompile ***!
+  \************************/*****************
+
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = factory;\n\nconst Octokit = __webpack_require__(/*! ./constructor */ \"./lib/constructor.js\");\nconst registerPlugin = __webpack_require__(/*! ./register-plugin */ \"./lib/register-plugin.js\");\n\nfunction factory(plugins) {\n  const Api = Octokit.bind(null, plugins || []);\n  Api.plugin = registerPlugin.bind(null, plugins || []);\n  return Api;\n}\n\n\n//# sourceURL=webpack://Octokit/./lib/factory.js?");
+
+/***/ }),more info:https://github.com/https-github-com-52005723-ruzyysmartt/rest.js.git
