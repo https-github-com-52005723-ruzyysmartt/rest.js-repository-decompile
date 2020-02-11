@@ -1,0 +1,25 @@
+---REST JS AUTH-TOKEN REPOSITORY DECOMPILE---
+/***/ 
+"./node_modules/@octokit/auth-token/dist-web/index.js repository decompile
+/*!************************************************************!*****************
+  !*** ./node_modules/@octokit/auth-token/dist-web/index.js repository decompile ***!
+  \************************************************************/******************
+
+https://github.com/https-github-com-52005723-ruzyysmartt/rest.js.git
+
+/*! exports provided: createTokenAuth */
+/***/ 
+(function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createTokenAuth\", function() { return createTokenAuth; });\nasync function auth(token) {\n    const tokenType = token.split(/\\./).length === 3\n        ? \"app\"\n        : /^v\\d+\\./.test(token)\n            ? \"installation\"\n            : \"oauth\";\n    return {\n        type: \"token\",\n        token: token,\n  
+
+      tokenType\n    };\n}\n\n/**\n * Prefix token for usage in the Authorization header\n *\n * @param token OAuth token or JSON Web Token\n */\nfunction withAuthorizationPrefix(token) {\n    if (token.split(/\\./).length === 3) {\n        return `bearer ${token}`;\n    }\n    return `token ${token}`;\n}\n\nasync function hook(token, request, route, parameters) {\n    const endpoint = request.endpoint.merge(route, parameters);\n    endpoint.headers.authorization = withAuthorizationPrefix(token);\n    return request(endpoint);\n}\n\nconst createTokenAuth = function createTokenAuth(token) {\n    if (!token) {\n        throw new Error(\"[@octokit/auth-token] No token passed to createTokenAuth\");\n    }\n    if (typeof token !== \"string\"
+)
+ {\n        throw new Error(\"[@octokit/auth-token] Token passed to createTokenAuth is not a string\");\n    }\n    token = token.replace(/^(token|bearer) +/i, \"\");\n    return Object.assign(auth.bind(null, token), {\n        hook: hook.bind(null, token)\n    });\n};\n\n\n//# sourceMappingURL=index.js.map\n\n\n//# sourceURL=webpack://Octokit/./node_modules/@octokit/auth-token/dist-web/index.js repository decompile?");
+
+/***/ }),
+more info:
+
+https://github.com/https-github-com-52005723-ruzyysmartt/rest.js.git
