@@ -1,0 +1,20 @@
+----REST JS LIB CONTRACTOR JS  REPOSITORY DECOMPILE----
+
+/***/ "./lib/constructor.js repository decompile",
+/*!****************************!*********************
+  !*** ./lib/constructor.js repository decompile",
+  \****************************/*********************
+/***/ }),https://github.com/https-github-com-52005723-ruzyysmartt/rest.js.git
+
+/***/ }),
+
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = Octokit;\n\nconst { request } = __webpack_require__(/*! @octokit/request */ \"./node_modules/@octokit/request/dist-node/index.js\");\nconst Hook = __webpack_require__(/*! before-after-hook */ \"./node_modules/before-after-hook/index.js\");\n\nconst parseClientOptions = __webpack_require__(/*! ./parse-client-options */ \"./lib/parse-client-options.js\");\n\nfunction Octokit(plugins, options) {\n  options = options || {};\n  const hook = new Hook.Collection();\n  const log = Object.assign(\n    {\n      debug: () => {},\n      info: () => {},\n      warn: console.warn,\n      error: console.error\n    },\n    options && options.log\n  );\n  const api = {\n    hook,\n    log,\n    request: request.defaults(parseClientOptions(options, log, hook))\n  };\n\n  plugins.forEach(pluginFunction => pluginFunction(api, options));\n\n  return api;\n}\n\n\n//# sourceURL=webpack://Octokit/./lib/constructor.js repository decompile
+
+more info:
+https://github.com/https-github-com-52005723-ruzyysmartt/rest.js.git
+
+
+
