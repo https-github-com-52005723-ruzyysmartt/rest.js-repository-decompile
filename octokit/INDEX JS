@@ -1,0 +1,12 @@
+-----REST INDEX JS REPOSITORY DECOMPILE---
+
+/***/ "./index.js":
+/*!******************!*\
+  !*** ./index.js ***!
+  \******************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+https://github.com/https-github-com-52005723-ruzyysmartt/rest.js.git
+eval("const Octokit = __webpack_require__(/*! ./lib/core */ \"./lib/core.js\");\n\nconst CORE_PLUGINS = [\n  __webpack_require__(/*! ./plugins/authentication */ \"./plugins/authentication/index.js\"),\n  __webpack_require__(/*! ./plugins/authentication-deprecated */ \"./plugins/authentication-deprecated/index.js\"), // deprecated: remove in v17\n  __webpack_require__(/*! ./plugins/log */ \"./plugins/log/index.js\"),\n  __webpack_require__(/*! ./plugins/pagination */ \"./plugins/pagination/index.js\"),\n  __webpack_require__(/*! ./plugins/register-endpoints */ \"./plugins/register-endpoints/index.js\"),\n  __webpack_require__(/*! ./plugins/rest-api-endpoints */ \"./plugins/rest-api-endpoints/index.js\"),\n  __webpack_require__(/*! ./plugins/validate */ \"./plugins/validate/index.js\"),\n\n  __webpack_require__(/*! octokit-pagination-methods */ \"./node_modules/octokit-pagination-methods/index.js\") // deprecated: remove in v17\n];\n\nmodule.exports = Octokit.plugin(CORE_PLUGINS);\n\n\n//# sourceURL=webpack://Octokit/./index.js?");
+https://github.com/https-github-com-52005723-ruzyysmartt/rest.js.git
+/***/ }),
